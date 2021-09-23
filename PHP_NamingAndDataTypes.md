@@ -32,8 +32,21 @@ weakly typed language.
 
 
 
+![vsphp](https://user-images.githubusercontent.com/91085020/134563742-9dd4185b-d13e-405f-b418-4baa4259de5f.png)
 
+![x5local](https://user-images.githubusercontent.com/91085020/134563756-bf00a516-7b6a-4984-ba82-91f7dab71d65.png)
+ 
+ If you see here, you will see that while running php, the example of x = '5' + 6 will print an error and not be compiled. To have php
+ compile a sum of two numbers, you would want to type something like this 
+ "<?php
+    $x=5; 
+    $y=6;
+    $z=$x+$y;  
+    echo "Sum: ",$z;    
+?>:
 
+when you check your work on a web browser you will find that you will get a response of "Sum11"
+ 
 
 Sources: https://flowframework.readthedocs.io/en/stable/TheDefinitiveGuide/PartV/CodingGuideLines/PHP.html
 https://www.greycampus.com/codelabs/php/variables
