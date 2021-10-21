@@ -29,3 +29,48 @@ echo $banana->get_name();
 ?>
 
 After this file is ran in your local server, you will get the output "Apple, Banana"
+
+In PHP, you can create multiple objects from a class. Each object has all the properties and methods defined in the class, but they will have different property values.
+Objects of a class is created using the "new" keyword as shown in above and below.
+$apple = new Fruit();. Classes must written in Uppercase such how Fruit is above. Variable names should be in lowercase and should self explanatory like so above. ($apple) to describe 
+a fruit would be the correct format, but something like ($Lizard) to describe a fruit wouldn't not work, but it would be considered incorrect by the standard.
+
+Inheritances allows a class to reuse the code from a previous class without duplicating it. In inheritance, you have a parent class with
+properites and methods and a child class can then use that code from the parent class( which can also be called a base class or a super class)
+In PHP, you want to use the "extends" keyword to define one class that inherits from another class. The class from which the subclass inherits is a parent class,
+a superclass, or a base class. It also should be noted that a subclass can have its own properties and methods. You will us
+$this keyword to call the methods of the parent class from methods in the child class. See example:
+
+<?php
+class Fruit {
+  public $name;
+  public $color;
+  public function __construct($name, $color) {
+    $this->name = $name;
+    $this->color = $color;
+  }
+  public function intro() {
+    echo "The fruit is {$this->name} and the color is {$this->color}.";
+  }
+}
+
+// Strawberry is inherited from Fruit
+class Strawberry extends Fruit {
+  public function message() {
+    echo "Am I a fruit or a berry? ";
+  }
+}
+$strawberry = new Strawberry("Strawberry", "red");
+$strawberry->message();
+$strawberry->intro();
+?>
+
+In PHP you can also override inheritance methods.
+Inherited methods can be overridden by redefining the methods (use the same name) in the child class.
+
+
+
+
+Sources: https://www.php.net/manual/en/indexes.functions.php
+https://www.w3schools.com/php/php_oop_classes_objects.asp
+https://www.w3schools.com/php/php_oop_inheritance.asp
